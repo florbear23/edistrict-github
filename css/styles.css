@@ -827,3 +827,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .also-list li strong{ color: var(--ink); font-weight: 600; display: block; }
 .also-list li strong{ margin-bottom: .2rem; }
+
+/* ---------- Brand logo ----------
+   The supplied logo is a metallic wordmark whose highlights wash out on a light
+   ground, so the header takes the brand navy (already used by the hero, CTA band
+   and footer). The footer was navy already and needs no change. */
+.brand-logo{ height: 26px; width: auto; display: block; flex: none; }
+@media (max-width: 560px){ .brand-logo{ height: 22px; } }
+
+.site-header{ border-bottom-color: rgba(255,255,255,.12); }
+.site-header::before{ background: rgba(12,37,52,.94); }
+.site-header.is-scrolled::before{ box-shadow: 0 1px 20px rgba(0,0,0,.38); }
+
+.nav-links a{ color: rgba(255,255,255,.78); }
+.nav-links a:hover{ color: #fff; }
+.nav-links a[aria-current="page"]{ color: #fff; }
+.nav-phone{ color: rgba(255,255,255,.72); }
+.nav-phone:hover{ color: #fff; }
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after{ background: #fff; }
+
+@media (max-width: 900px){
+  /* Panel stays fully opaque — see the .site-header note above about
+     backdrop-filter and fixed descendants. */
+  .nav-links{ background: var(--navy-deep); border-top-color: rgba(255,255,255,.12); }
+  .nav-links a{ color: rgba(255,255,255,.88); border-bottom-color: rgba(255,255,255,.12); }
+  .nav-links a[aria-current="page"]{ color: var(--amber); }
+  .nav-links .nav-panel-phone{ color: rgba(255,255,255,.72); }
+  .nav-links .nav-panel-phone svg{ color: var(--blueprint-bright); }
+}
