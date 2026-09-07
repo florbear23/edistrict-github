@@ -1,0 +1,75 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-startup-growth.html"
+  to = "/blog/startup-growth/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-networking.html"
+  to = "/blog/community-events/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-productivity.html"
+  to = "/blog/productivity/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-location.html"
+  to = "/blog/location/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-technology.html"
+  to = "/blog/fiber-internet/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-success-story.html"
+  to = "/blog/tenant-spotlight/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-post-amenities.html"
+  to = "/blog/amenities/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-category-*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

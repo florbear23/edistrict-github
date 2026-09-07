@@ -1,0 +1,16 @@
+# Normalise line endings. The site is authored on Windows and served from
+# Linux (Netlify), so text files stay LF in the repo and in the checkout —
+# this stops the whole tree showing as modified on a different machine.
+* text=auto eol=lf
+
+# Binary assets — never transform these.
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary
+*.woff binary
+*.woff2 binary
+*.zip  binary

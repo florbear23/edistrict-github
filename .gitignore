@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------
+# E-District v1 — files kept out of version control
+#
+# This repository holds the deployable site only: *.html, css/, js/,
+# assets/, netlify.toml, robots.txt, sitemap.xml.
+#
+# The rules below are guards. Most match nothing today; they exist so
+# that local config, build output or credentials can't be committed by
+# accident later.
+# ---------------------------------------------------------------
+
+# Local dev-server config (machine-specific paths and ports)
+/.claude/
+
+# Unrelated third-party material. The source working folder this repo was
+# copied from also contains an assets-2/ directory belonging to a different
+# client; it is not part of this site and must never be committed here.
+/assets-2/
+
+# Build artefacts / exports
+*.zip
+*.rar
+*.7z
+/edistrict-deploy/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies (none today; guard in case tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials*
+secrets*
+id_rsa*
